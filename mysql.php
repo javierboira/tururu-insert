@@ -1,4 +1,3 @@
-﻿
 <?php
 $DB_ADDRESS="/cloudsql/delta-repeater-228411:europe-west3:bdd";
 $DB_USER="pablo";
@@ -60,11 +59,10 @@ header('Content-type: text/csv');
 </head>
 <body>
 <image src="Logo.png" >
-<h1>Insertada incidencia numero: </h1></p>';
+<h1>Insertada incidencia numero: ';
 	      
-	      echo $idok;
-	      echo '
- <form action="https://tururu.appspot.com" method="post" enctype="multipart/form-data">
+echo $idok;
+echo ' </h1></p><form action="https://tururu.appspot.com" method="post" enctype="multipart/form-data">
         <p>Nombre: <input type="text" name="Nombre" size="40"  ></p>
         <p>Aula: <input type="text" name="Aula" size="40"></p>
         <p>Objeto: <input type="text" name="Objeto" size="40"></p>
@@ -80,7 +78,7 @@ header('Content-type: text/csv');
  
  
 </body>
-</html>'
+</html>';
 
       
       }
