@@ -26,7 +26,6 @@ header('Content-type: text/csv');
         }  
     $r1->close();
 
-    echo $idok;
     $idok=$idok+1;
     if(!isset($_POST['Nombre'])){echo "vacia";}else{
     $query = "INSERT INTO mantenimiento VALUES ('";
@@ -45,26 +44,43 @@ header('Content-type: text/csv');
         
         
        // aquí va a hacer la misma sentencia INSERT que existía cuyo resultado se coloca en el objeto-consulta $result.
-      $result=$conn->query($query);   
-      echo "\n".$query."\n";                                                  //runs the posted query
+      $result=$conn->query($query);                                               //runs the posted query
       if($result === false){
         header("HTTP/1.0 400 Bad Request");                                             //sends back a bad request error
         echo "Wrong SQL: " . $query . " Error: " . $conn->error, E_USER_ERROR;          //errors if the query is bad and spits the error back to the client
       } else {
-      echo "FICHA NÚMERO ".$idok." INSERTADA"; //aquí nos podemos estirar un poco y vamos a mandar un html más completo....
+     
+    echo '<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="expires" content="0"/>
+<title>Formulario</title>
+ 
+                
+</head>
+<body>
+<image src="Logo.png" >
+<h1>Insertada incidencia numero: </h1></p>';
+	      
+	      echo $idok;
+	      echo '
+ <form action="https://tururu.appspot.com" method="post" enctype="multipart/form-data">
+        <p>Nombre: <input type="text" name="Nombre" size="40"  ></p>
+        <p>Aula: <input type="text" name="Aula" size="40"></p>
+        <p>Objeto: <input type="text" name="Objeto" size="40"></p>
+        <p>Descripcion: <input type="text" name="Descripcion" size="40"></p>
+        <p>Fecha: <input type="date" name="Fecha" Id="Fecha" size="40"></p>
 
-    $r1=$conn->query("SELECT id from mantenimiento where id=(select max(id) from mantenimiento);");   //rellenar el interior de las comillas y seguir a partir de aquí.........                                  
-        $idok = '';                                                                    
-        $r1->data_seek(0);
-        while($row = $r1->fetch_assoc()){
-          foreach ($row as $key => $value) {     
-            $idok .= $value.",";
-          }
-          $idok = rtrim($idok, ",");
-        }  
-    $r1->close();
+              <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+              </p>
 
-    echo $idok;
+ </form>
+ 
+ 
+</body>
+</html>'
 
       
       }
