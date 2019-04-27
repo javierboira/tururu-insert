@@ -4,7 +4,7 @@ $DB_USER="pablo";
 $DB_PASS="pablo";
 $DB_NAME="bdd1";
 header('Cache-Control: no-cache, must-revalidate');
-header('Content-type: text/csv');
+header('Content-type: text/html');
     
     $conn = new mysqli(null, $DB_USER, $DB_PASS, $DB_NAME, 0, $DB_ADDRESS);
     //$conn->set_charset("iso-8859-1");   
