@@ -58,7 +58,7 @@ header('Content-type: text/html');
                 
 </head>
 <body>
-<image src="Logo.png" >
+<image src="http://mant.iesdellanes.org/formulario/Logo.png" >
 <h1>Insertada incidencia numero: ';
 	      
 echo $idok;
