@@ -84,8 +84,8 @@ echo ' </h1></p><form action="https://tururu.appspot.com" method="post" enctype=
               <p>
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Borrar">
-		<input type="image" name="http://mant.iesdellanes.org/formulario/derecha" src="derecha.png" alt="derecha">
-		<input type="image" name="http://mant.iesdellanes.org/formulario/izquierda" src="izquierda.png" alt="derecha">
+		<input type="image" name="http://mant.iesdellanes.org/formulario/derecha.png" src="derecha.png" alt="derecha">
+		<input type="image" name="http://mant.iesdellanes.org/formulario/izquierda.png" src="izquierda.png" alt="derecha">
               </p>
 
  </form>
