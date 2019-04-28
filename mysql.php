@@ -68,10 +68,18 @@ echo ' </h1></p><form action="https://tururu.appspot.com" method="post" enctype=
         echo'<p>Nombre: <input type="text" name="Nombre" value="';
 	echo $_POST['Nombre'];
 	echo '" size="40"  ></p>
-        <p>Aula: <input type="text" name="Aula" size="40"></p>
-        <p>Objeto: <input type="text" name="Objeto" size="40"></p>
-        <p>Descripcion: <input type="text" name="Descripcion" size="40"></p>
-        <p>Fecha: <input type="date" name="Fecha" Id="Fecha" size="40"></p>
+        <p>Aula: <input type="text" name="Aula" value="';
+	echo $_POST['Aula'];
+		echo '" size="40"></p>
+        <p>Objeto: <input type="text" name="Objeto" value="';
+	 echo $_POST['Objeto'];     
+	      echo '"size="40"></p>
+        <p>Descripcion: <input type="text" name="Descripcion" value="';
+	      echo $_POST['Descripcion'];
+	      echo '"size="40"></p>
+        <p>Fecha: <input type="date" name="Fecha" Id="Fecha" value="';
+	      echo $_POST['Fecha'];
+	      echo'" size="40"></p>
 
               <p>
                 <input type="submit" value="Enviar">
