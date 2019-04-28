@@ -63,7 +63,9 @@ header('Content-type: text/html');
 	      
 echo $idok;
 echo ' </h1></p><form action="https://tururu.appspot.com" method="post" enctype="multipart/form-data">
-        <p>Nombre: <input type="text" name="Nombre" size="40"  ></p>
+        <p>Nombre: <input type="text" name="Nombre" value="';
+	echo $_POST['Nombre'];
+	echo '" size="40"  ></p>
         <p>Aula: <input type="text" name="Aula" size="40"></p>
         <p>Objeto: <input type="text" name="Objeto" size="40"></p>
         <p>Descripcion: <input type="text" name="Descripcion" size="40"></p>
