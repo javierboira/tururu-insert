@@ -62,8 +62,10 @@ header('Content-type: text/html');
 <h1>Insertada incidencia numero: ';
 	      
 echo $idok;
-echo ' </h1></p><form action="https://tururu.appspot.com" method="post" enctype="multipart/form-data">
-        <p>Nombre: <input type="text" name="Nombre" value="';
+echo ' </h1></p><form action="https://tururu.appspot.com" method="post" enctype="multipart/form-data"><p>Numero: <input type="text" name="Incidencia" value="';
+	echo $idok;
+	echo '" size="20"  ></p>';
+        echo'<p>Nombre: <input type="text" name="Nombre" value="';
 	echo $_POST['Nombre'];
 	echo '" size="40"  ></p>
         <p>Aula: <input type="text" name="Aula" size="40"></p>
