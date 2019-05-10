@@ -16,6 +16,15 @@ header('Content-type: text/html');
           		foreach ($row as $key => $value) {     
             			$pablo[$key] = $value;
           		}
+			
+		if (isset($pablo['Id']){
+			echo '</p>Incidencia: '.$pablo['Id].'</p>;
+		}else{
+			echo '</p>ERROR!!!, No existe esa incidencia ó ha llegado al final de la tabla</p>';
+		};
+		
+			
+			
         	}  
 	if ( isset($pablo['Id'])){
 		echo '</p>Incidencia: '.$pablo['Id'].'</p>';
@@ -81,6 +90,16 @@ header('Content-type: text/html');
           		foreach ($row as $key => $value) {     
             			$pablo[$key] = $value;
           		}
+			
+			if (isset($pablo['Id']){
+			echo '</p>Incidencia: '.$pablo['Id].'</p>;
+		}else{
+			echo '</p>ERROR!!!, No existe esa incidencia ó ha llegado al final de la tabla</p>';
+		};
+			
+			
+			
+			
         	}  
 	if ( isset($pablo['Id'])){
 		echo '</p>Incidencia: '.$pablo['Id'].'</p>';
