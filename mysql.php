@@ -18,6 +18,13 @@ header('Content-type: text/html');
           		}
         	}  
     		$r1->close();
+		
+		if ( isset($pablo['id']){
+		     echo '</p>Incidencia: '.$pablo['id'].'</p>';
+		}else{ 
+			echo '</p>ERROR!!!, No existe esa incidencia ó ha llegado al final de la tabla </p>';
+			};
+		
 		echo '<!DOCTYPE html>
 		<html>
 		<head>
