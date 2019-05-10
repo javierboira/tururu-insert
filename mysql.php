@@ -17,7 +17,7 @@ header('Content-type: text/html');
             			$pablo[$key] = $value;
           		}
         	}  
-	if ( isset($pablo['Id']){
+	if ( isset($pablo['Id'])){
 		echo '</p>Incidencia: '.$pablo['Id'].'</p>';
 	}else{
 		echo'</p>ERROR!!!, No existe esa incidencia ó ha llegado al final de la tabla</p>'
