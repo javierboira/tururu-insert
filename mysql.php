@@ -5,7 +5,6 @@ $DB_PASS="pablo";
 $DB_NAME="bdd1";
 header('Cache-Control: no-cache, must-revalidate');
 header('Content-type: text/html');
-
    if($_POST['derecha_x']){
 	$conn = new mysqli(null, $DB_USER, $DB_PASS, $DB_NAME, 0, $DB_ADDRESS);
     	if($conn->connect_error){                                                           //checks connection
@@ -50,8 +49,8 @@ header('Content-type: text/html');
               	<p>
                 <input type="submit" name="submit" value="Enviar">
                 <input type="reset" value="Borrar">
-		<input type="image" name="derecha" src="http://mant.iesdellanes.org/formulario/flechaderecha.png" alt="derecha">
-		<input type="image" name="izquierda" src="http://mant.iesdellanes.org/formulario/flechaizquierda.png" alt="izqierda">
+		<input type="image" name="derecha" src="http://mant.iesdellanes.org/formulario/flechaderecha.png" style="width:50px;height:200" alt="derecha">
+		<input type="image" name="izquierda" src="http://mant.iesdellanes.org/formulario/flechaizquierda.png" style="width:50px;height:200" alt="izqierda">
               	</p>
 		</form>
 		</body>
@@ -103,11 +102,10 @@ header('Content-type: text/html');
               	<p>
                 <input type="submit" name="submit" value="Enviar">
                 <input type="reset" value="Borrar">
-		<input type="image" name="derecha" src="http://mant.iesdellanes.org/formulario/flechaderecha.png" alt="derecha">
-		<input type="image" name="izquierda" src="http://mant.iesdellanes.org/formulario/flechaizquierda.png" alt="izqierda">
+		<input type="image" name="derecha" src="http://mant.iesdellanes.org/formulario/flechaderecha.png" style="width:50px;heighht:200" alt="derecha">
+		<input type="image" name="izquierda" src="http://mant.iesdellanes.org/formulario/flechaizquierda.png" style="width:50px;heighht:200" alt="izqierda">
               	</p>
  		</form>
-
 		</body>
 		</html>';      
       		$conn->close();                                          //closes the DB
@@ -128,7 +126,6 @@ header('Content-type: text/html');
           		$idok = rtrim($idok, ",");
         	}  
     		$r1->close();
-
     $idok=$idok+1;
     if(!isset($_POST['Nombre'])){echo "vacia";}else{
     $query = "INSERT INTO mantenimiento VALUES ('";
@@ -218,16 +215,13 @@ header('Content-type: text/html');
 	      echo '"size="40"></p>
         <p>Fecha: <input type="date" name="Fecha" Id="Fecha" value="';
 	      echo'" size="40"></p>
-
               <p>
                 <input type="submit" name="submit" value="Enviar">
                 <input type="reset" value="Borrar">
 		<input type="image" value="derecha" name="derecha" src="http://mant.iesdellanes.org/formulario/flechaderecha.png" alt="derecha">
 		<input type="image" value="izquierda" name="izquierda" src="http://mant.iesdellanes.org/formulario/flechaizquierda.png" alt="izqierda">
               </p>
-
  </form>
-
 ha entrado por el else.
  
 </body>
